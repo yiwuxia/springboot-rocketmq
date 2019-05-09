@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeHandlers>
+       <!-- 只配置了一个自定义枚举类型的处理器-->
+    	<typeHandler handler="com.example.demo.core.EnumValueTypeHandler"/>
+    </typeHandlers>
+</configuration>

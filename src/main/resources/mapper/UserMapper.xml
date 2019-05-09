@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.UserMapper">
+ 
+    <resultMap id="map1" type="com.example.demo.domin.User">
+        <result column="id"  property="id" />
+        <!--这里可以直接将数据的int类型转为java枚举类型-->
+        <result column="type"  property="type" typeHandler="com.example.demo.core.EnumValueTypeHandler" />
+        <result column="name"  property="name" />
+    </resultMap>
+ 
+    <select id="getUser"  resultMap="map1">
+        select id,username,sex,city   from t_users
+    </select>
+
+</mapper>
